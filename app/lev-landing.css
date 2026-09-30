@@ -1,0 +1,308 @@
+/* Лев Казино landing — own hand-written styles, no third-party CSS/JS frameworks used here */
+
+.lv9k-html {
+  background: #15100b;
+}
+
+.lv9k-body {
+  margin: 0;
+}
+
+.lv9k-root {
+  --lv9k-bg: #15100b;
+  --lv9k-bg-raised: #1f1811;
+  --lv9k-ink: #f4ead4;
+  --lv9k-ink-soft: #b9a98a;
+  --lv9k-gold: #d6a544;
+  --lv9k-gold-soft: rgba(214, 165, 68, 0.16);
+  --lv9k-crimson: #9a2a35;
+  --lv9k-line: rgba(214, 165, 68, 0.22);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--lv9k-bg);
+  color: var(--lv9k-ink);
+  font-family: var(--lv9k-font-body), Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.lv9k-root * {
+  box-sizing: border-box;
+}
+
+.lv9k-root h1,
+.lv9k-root h2 {
+  font-family: var(--lv9k-font-heading), Georgia, serif;
+  font-weight: 700;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.lv9k-root p {
+  margin: 0;
+}
+
+.lv9k-root a {
+  color: inherit;
+}
+
+.lv9k-root img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.9rem;
+}
+
+/* Header */
+
+.lv9k-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(21, 16, 11, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--lv9k-line);
+}
+
+.lv9k-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.lv9k-logo {
+  font-family: var(--lv9k-font-heading), Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--lv9k-ink);
+  white-space: nowrap;
+}
+
+.lv9k-logo-accent {
+  color: var(--lv9k-gold);
+}
+
+.lv9k-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.lv9k-nav-link {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--lv9k-ink-soft);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.lv9k-nav-link:hover,
+.lv9k-nav-link:focus-visible {
+  color: var(--lv9k-gold);
+  background: var(--lv9k-gold-soft);
+}
+
+/* Main / sections (flex column, each block self-contained and reorderable) */
+
+.lv9k-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lv9k-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 2.75rem 1.25rem;
+  max-width: 72rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.lv9k-section--alt {
+  background: var(--lv9k-bg-raised);
+}
+
+.lv9k-eyebrow {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lv9k-gold);
+  border: 1px solid var(--lv9k-line);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.lv9k-section-title {
+  font-size: clamp(1.35rem, 4.5vw, 1.9rem);
+}
+
+.lv9k-section-text {
+  color: var(--lv9k-ink-soft);
+  font-size: 1rem;
+  max-width: 46rem;
+}
+
+.lv9k-section-media img {
+  width: 100%;
+  border: 1px solid var(--lv9k-line);
+}
+
+.lv9k-section-with-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lv9k-cta {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--lv9k-gold);
+  color: #1a1206;
+  font-family: var(--lv9k-font-body), Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lv9k-cta:hover,
+.lv9k-cta:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px -12px var(--lv9k-gold);
+}
+
+/* Hero */
+
+.lv9k-hero {
+  padding-top: 2.25rem;
+}
+
+.lv9k-hero-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.lv9k-hero-title {
+  font-size: clamp(1.7rem, 7vw, 2.75rem);
+}
+
+.lv9k-hero-lead {
+  color: var(--lv9k-ink-soft);
+  font-size: 1.05rem;
+  max-width: 40rem;
+}
+
+.lv9k-hero-media img {
+  border: 1px solid var(--lv9k-line);
+}
+
+/* Footer */
+
+.lv9k-footer {
+  border-top: 1px solid var(--lv9k-line);
+  background: var(--lv9k-bg-raised);
+  padding: 2.25rem 1.25rem 2.5rem;
+}
+
+.lv9k-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.lv9k-disclaimer {
+  color: var(--lv9k-ink-soft);
+  font-size: 0.82rem;
+  max-width: 46rem;
+}
+
+.lv9k-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lv9k-tag {
+  font-size: 0.78rem;
+  text-decoration: none;
+  color: var(--lv9k-gold);
+  background: var(--lv9k-gold-soft);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+}
+
+.lv9k-tag:hover,
+.lv9k-tag:focus-visible {
+  background: var(--lv9k-gold);
+  color: #1a1206;
+}
+
+.lv9k-copyright {
+  color: var(--lv9k-ink-soft);
+  font-size: 0.78rem;
+}
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  .lv9k-section {
+    padding: 3.5rem 2rem;
+  }
+
+  .lv9k-header-inner {
+    padding: 1rem 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .lv9k-hero-layout,
+  .lv9k-section-with-media {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lv9k-hero-copy,
+  .lv9k-section-copy {
+    flex: 1;
+  }
+
+  .lv9k-hero-media,
+  .lv9k-section-media {
+    flex: 1;
+  }
+
+  .lv9k-section-with-media.lv9k-media-first {
+    flex-direction: row-reverse;
+  }
+
+  .lv9k-section {
+    padding: 4.5rem 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lv9k-nav-link,
+  .lv9k-cta {
+    transition: none;
+  }
+}
