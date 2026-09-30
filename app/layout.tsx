@@ -95,6 +95,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`lv9k-html ${ptSerif.variable} ${ptSans.variable}`}>
       <head>
+        <meta name="yandex-verification" content="224ac587c3bccdf0" />
         {/* Extra custom tags can be inserted here */}
         <meta name="format-detection" content="telephone=no" />
       </head>
